@@ -114,21 +114,24 @@ Ladbrokes, Neds, Unibet, PointsBet, NextBet, TABtouch, Palmerbet and Betfair.
 Bookmaker **keys** in the API are not always the brand: NextBet is returned as `playup`, its
 name before rebranding. Filter on the key, not the display name.
 
-**Depth is uneven, and it matters more than the headline count.** Measured on Australian races
-within two hours of jumping: Betfair, BetRight, Sportsbet and Betr quote essentially every race;
-TAB about four in five; Ladbrokes and Neds roughly two thirds; then it thins — PointsBet and
-Unibet near two in five, TABtouch about one in five, Palmerbet under one in ten. Books also
-publish markets at different times, so a race six hours out often carries only two or three
-prices where more appear closer to the jump. Every response names the books that actually quoted,
-so you can see the real depth per race rather than trusting an average.
+**Near the jump, coverage is broad and fairly even.** Measured over 13 days of captured
+snapshots — 3,339 Australian races, each within 30 minutes of jumping — every one of the twelve
+sources quoted between 75% and 97% of them: TABtouch 97%, PointsBet 96%, then Sportsbet, Neds,
+Palmerbet, Ladbrokes, BetRight, Betr, TAB and Betfair all clustered at 80–82%, Unibet 79% and
+NextBet 75%.
+
+Books publish markets at different times, so a race several hours out often carries only two or
+three prices where more appear closer to the jump. Every response names the books that actually
+quoted, so you can read the real depth per race rather than trusting an average.
 
 **Sports: fewer again.** At most 5 bookmakers on AFL and NRL, 3 on NBA and ATP, and as few as 1
 on some competitions. That is a connector-coverage limit, not an outage. Racing is where this
 feed is strongest, and the tools say so rather than implying a uniform market.
 
-Pass `country=AU` for racing. Foreign and unlabelled races are quoted by a **single** bookmaker —
-every one of them in the window measured, never two — so comparing prices across books on them
-compares nothing.
+Pass `country=AU` for racing. **87% of foreign and unlabelled races carry exactly one
+bookmaker**, so there is usually nothing to compare — but "usually" is the honest word: over the
+same 13 days, 10% carried two books and a small tail (about 3%) carried eleven. Check
+`bookmakers` per race rather than assuming either way.
 
 An Australian race **gathers books as it approaches the jump**, so its depth is a range, not a
 number. Measured 2026-08-17: a median of **10** bookmakers inside 30 minutes of the jump, 9 at
@@ -157,6 +160,6 @@ assuming a mix.
 - [API documentation](https://api.puntersedge.online/docs)
 - [Pricing](https://puntersedge.online/api/pricing) — free tier 1,500 credits/month
 - [Python SDK](https://github.com/Propertyscout001/puntersedge-python)
-- [Postman collection](https://api.puntersedge.online/postman.json) — 36 ready-to-run requests; import into Postman via Import → Link
+- [Postman collection](https://api.puntersedge.online/postman.json) — 37 ready-to-run requests; import into Postman via Import → Link
 
 MIT © PuntersEdge

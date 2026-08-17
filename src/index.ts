@@ -119,10 +119,10 @@ server.tool(
       .describe("Comma-separated: horse, greyhound, harness. Omit for all three."),
     country: z.string().optional()
       .describe("ISO country codes, comma-separated, e.g. 'AU' or 'AU,NZ'. Pass AU for Australian " +
-        "meetings — foreign and unlabelled races are quoted by a SINGLE bookmaker at any range, so " +
-        "comparing prices across books on them compares nothing. An AU race gathers books toward " +
-        "the jump: a median of 10 inside 30 minutes, 5 at one to two hours, 2 beyond that. How much " +
-        "of the card is foreign swings with the clock, so filter rather than assume a mix."),
+        "meetings — 87% of foreign and unlabelled races carry exactly ONE bookmaker, so there is " +
+        "usually nothing to compare, though 10% carry two and a small tail carries eleven. An AU " +
+        "race gathers books toward the jump: a median of 10 inside 30 minutes, 5 at one to two " +
+        "hours, 2 beyond that. Read the bookmakers array per race rather than assuming."),
     bookmakers: z.string().optional()
       .describe("Comma-separated bookmaker keys to restrict to, e.g. 'sportsbet,tab'."),
   },
