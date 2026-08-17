@@ -119,8 +119,9 @@ server.tool(
       .describe("Comma-separated: horse, greyhound, harness. Omit for all three."),
     country: z.string().optional()
       .describe("ISO country codes, comma-separated, e.g. 'AU' or 'AU,NZ'. Pass AU for Australian " +
-        "meetings — about one upcoming race in five is foreign or unlabelled and carries a median " +
-        "of ONE bookmaker, which makes price comparison meaningless. AU races carry a median of four."),
+        "meetings — foreign and unlabelled races are quoted by a SINGLE bookmaker, so comparing " +
+        "prices across books on them compares nothing. AU races carry around five. How much of the " +
+        "card is foreign swings with the clock, so filter rather than assume a mix."),
     bookmakers: z.string().optional()
       .describe("Comma-separated bookmaker keys to restrict to, e.g. 'sportsbet,tab'."),
   },

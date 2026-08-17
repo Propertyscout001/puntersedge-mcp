@@ -123,9 +123,13 @@ so you can see the real depth per race rather than trusting an average.
 on some competitions. That is a connector-coverage limit, not an outage. Racing is where this
 feed is strongest, and the tools say so rather than implying a uniform market.
 
-Pass `country=AU` for racing. About one upcoming race in five is foreign or unlabelled, and those
-carry a median of **one** bookmaker — price comparison on them is meaningless. Australian races
-carry a median of **four**.
+Pass `country=AU` for racing. Foreign and unlabelled races are quoted by a **single** bookmaker —
+every one of them in the window measured, never two — so comparing prices across books on them
+compares nothing. Australian races carry around **five**.
+
+How much of the card is foreign swings with the clock rather than sitting at some headline ratio:
+near zero through the Australian afternoon, all of it overnight. Filter on `country` rather than
+assuming a mix.
 
 ---
 
@@ -144,6 +148,6 @@ carry a median of **four**.
 - [API documentation](https://api.puntersedge.online/docs)
 - [Pricing](https://puntersedge.online/api/pricing) — free tier 1,500 credits/month
 - [Python SDK](https://github.com/Propertyscout001/puntersedge-python)
-- [Postman collection](https://api.puntersedge.online/postman.json) — all 36 endpoints; import into Postman via Import → Link
+- [Postman collection](https://api.puntersedge.online/postman.json) — 36 ready-to-run requests; import into Postman via Import → Link
 
 MIT © PuntersEdge
