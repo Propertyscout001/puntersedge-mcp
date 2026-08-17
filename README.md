@@ -125,7 +125,13 @@ feed is strongest, and the tools say so rather than implying a uniform market.
 
 Pass `country=AU` for racing. Foreign and unlabelled races are quoted by a **single** bookmaker —
 every one of them in the window measured, never two — so comparing prices across books on them
-compares nothing. Australian races carry around **five**.
+compares nothing.
+
+An Australian race **gathers books as it approaches the jump**, so its depth is a range, not a
+number. Measured 2026-08-17: a median of **10** bookmakers inside 30 minutes of the jump, 9 at
+30–60 minutes, 5 at one to two hours, and 2 beyond that. `racing_next_to_go` returns imminent
+races, so it sits at the deep end of that range — which is why a headline average across the
+whole feed understates what you actually get back.
 
 How much of the card is foreign swings with the clock rather than sitting at some headline ratio:
 near zero through the Australian afternoon, all of it overnight. Filter on `country` rather than
