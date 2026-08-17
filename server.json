@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.propertyscout001/puntersedge",
+  "description": "Live Australian racing and sports odds from 12 bookmakers, with per-price freshness. Next-to-go races with every book's price, best odds, market movers, results, and sports odds.",
+  "repository": {
+    "url": "https://github.com/Propertyscout001/puntersedge-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "puntersedge-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "PUNTERSEDGE_API_KEY",
+          "description": "PuntersEdge API key. Free tier is 1,500 credits/month with no card required — get one at https://puntersedge.online/api",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "PUNTERSEDGE_BASE_URL",
+          "description": "Override the API base URL. Defaults to https://api.puntersedge.online/v1 — you should not normally set this.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
