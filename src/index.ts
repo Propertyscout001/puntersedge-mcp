@@ -119,8 +119,8 @@ server.tool(
       .describe("Comma-separated: horse, greyhound, harness. Omit for all three."),
     country: z.string().optional()
       .describe("ISO country codes, comma-separated, e.g. 'AU' or 'AU,NZ'. Pass AU for Australian " +
-        "meetings — about two thirds of the world card is foreign racing quoted by a median of ONE " +
-        "bookmaker, which makes price comparison meaningless."),
+        "meetings — about one upcoming race in five is foreign or unlabelled and carries a median " +
+        "of ONE bookmaker, which makes price comparison meaningless. AU races carry a median of four."),
     bookmakers: z.string().optional()
       .describe("Comma-separated bookmaker keys to restrict to, e.g. 'sportsbet,tab'."),
   },
@@ -201,8 +201,8 @@ server.tool(
   "get_sports_odds",
   "Head-to-head and other market odds for one sport, from every bookmaker covering it. Use for " +
     "'odds for the <team> game', 'who is favourite in the NRL tonight'. Sports coverage is thinner " +
-    "than racing — roughly 4 bookmakers on AFL/NRL/NBA and as few as 1 on some competitions — so say " +
-    "how many books are quoting rather than implying a full market.",
+    "than racing — at most 5 bookmakers on AFL and NRL, 3 on NBA and ATP, and as few as 1 on some " +
+    "competitions — so say how many books are quoting rather than implying a full market.",
   {
     sport_key: z.string().describe("From list_sports, e.g. 'afl', 'nrl', 'nba'."),
     markets: z.string().optional().describe("Comma-separated market keys, e.g. 'h2h,totals'."),

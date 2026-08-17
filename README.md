@@ -4,13 +4,14 @@
 
 An [MCP](https://modelcontextprotocol.io) server for the [PuntersEdge AU Odds API](https://puntersedge.online/api-platform).
 Ask Claude, ChatGPT, Cursor or any MCP-capable client what's racing next and get real prices from
-**12 Australian bookmakers**, side by side, with each price's own age attached.
+**12 Australian sources** — 11 bookmakers plus the Betfair Exchange — side by side, with each
+price's own age attached.
 
 ```
 You: What's the next race at Randwick and who's favourite?
 
 → racing_next_to_go(num_races=3, country="AU")
-← Wiesners Maiden Plate R1 — 11 runners, 12 bookmakers, data 38s old
+← Wiesners Maiden Plate R1 — 11 runners, 8 bookmakers, data 38s old
   Favourite: <runner> at $2.40 (sportsbet) / $2.55 (tab) / $2.35 (neds)
 ```
 
@@ -107,15 +108,24 @@ price as fact — it can say how fresh the number is instead of implying it is l
 
 ## Coverage, stated honestly
 
-**Racing: 12 bookmakers**, each quoting 74–97% of Australian races — TABtouch, PointsBet, Neds,
-Ladbrokes, Betr, Sportsbet, BetRight, TAB, Palmerbet, Unibet, NextBet and the Betfair Exchange.
+**Racing: 12 sources** — 11 bookmakers plus the Betfair Exchange: BetRight, Sportsbet, Betr, TAB,
+Ladbrokes, Neds, Unibet, PointsBet, PlayUp, TABtouch, Palmerbet and Betfair.
 
-**Sports: fewer.** Around 4 bookmakers on AFL/NRL/NBA, 3 on ATP, and as few as 1 on some
-competitions. That is a connector-coverage limit, not an outage. Racing is where this feed is
-strongest, and the tools say so rather than implying a uniform market.
+**Depth is uneven, and it matters more than the headline count.** Measured on Australian races
+within two hours of jumping: Betfair, BetRight, Sportsbet and Betr quote essentially every race;
+TAB about four in five; Ladbrokes and Neds roughly two thirds; then it thins — PointsBet and
+Unibet near two in five, TABtouch about one in five, Palmerbet under one in ten. Books also
+publish markets at different times, so a race six hours out often carries only two or three
+prices where more appear closer to the jump. Every response names the books that actually quoted,
+so you can see the real depth per race rather than trusting an average.
 
-Pass `country=AU` for racing. Roughly two thirds of the world card is foreign racing quoted by a
-median of **one** bookmaker, which makes price comparison meaningless.
+**Sports: fewer again.** At most 5 bookmakers on AFL and NRL, 3 on NBA and ATP, and as few as 1
+on some competitions. That is a connector-coverage limit, not an outage. Racing is where this
+feed is strongest, and the tools say so rather than implying a uniform market.
+
+Pass `country=AU` for racing. About one upcoming race in five is foreign or unlabelled, and those
+carry a median of **one** bookmaker — price comparison on them is meaningless. Australian races
+carry a median of **four**.
 
 ---
 
