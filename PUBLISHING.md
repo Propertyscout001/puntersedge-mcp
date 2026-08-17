@@ -63,3 +63,64 @@ than taking manual submissions, so they tend to pick a server up on their own on
 
 `package.json` version, `server.json` version, and `server.json` packages[0].version must all
 match, or the publish is rejected. Bump all three together.
+
+
+---
+
+## ⚠️ PARKED 2026-08-17 — read this before retrying
+
+Everything except the npm publish is done. **Do not repeat the token roulette**; four attempts
+failed for the same reason.
+
+### What blocks it
+
+The npm account `puntersedge01` **enforces 2FA for publishing**. Every attempt returned:
+
+    PUT 403 — Two-factor authentication or granular access token with
+    bypass 2fa enabled is required to publish packages.
+
+### What does NOT work
+
+| Attempt | Result |
+| --- | --- |
+| Web login (`npm login`) | Authenticates (`whoami` works) but publish 403s — no OTP challenge |
+| Classic **Publish** token | Same 403. It authenticates but cannot satisfy 2FA |
+| A placeholder pasted literally | `_authToken=YOUR_TOKEN` sat in ~/.npmrc; publish 404'd |
+
+**Diagnostic that settles it in one command:** `npm token list` lists **classic tokens only**.
+If your new token appears there, it is classic and will fail. A granular token never appears and
+is ~67-72 chars; classic is 40. Check the length before trying to publish.
+
+### What WILL work
+
+Either of these:
+
+```bash
+# A. Interactive — no token involved, prompts for the authenticator code
+cd ~/puntersedge-mcp
+npm login --auth-type=legacy      # username, password, OTP
+npm publish --access public
+```
+
+```bash
+# B. Granular token — must be created from the "Granular Access Token" button
+#    (NOT "Classic Token"), with Read AND write, and "Bypass 2FA" ticked
+npm config set //registry.npmjs.org/:_authToken=<the ~70-char npm_ value>
+npm whoami                        # must print puntersedge01
+npm publish --access public
+```
+
+Then, unchanged and already prepared:
+
+```bash
+npm view puntersedge-mcp version  # must print 0.1.0
+./mcp-publisher publish           # already logged in; namespace casing already fixed
+```
+
+### State when parked
+
+- Repo public, installable **today** via `npx github:Propertyscout001/puntersedge-mcp`
+- `server.json` validates clean against the live registry
+- Namespace `io.github.Propertyscout001/puntersedge` — case-sensitive, matches package.json
+- `~/.npmrc` holds a **revoked** token; it must be replaced, not reused
+- Nothing is half-published: npm has no `puntersedge-mcp`, the registry has no entry
