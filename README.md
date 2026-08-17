@@ -144,5 +144,6 @@ carry a median of **four**.
 - [API documentation](https://api.puntersedge.online/docs)
 - [Pricing](https://puntersedge.online/api/pricing) — free tier 1,500 credits/month
 - [Python SDK](https://github.com/Propertyscout001/puntersedge-python)
+- [Postman collection](https://api.puntersedge.online/postman.json) — all 36 endpoints; import into Postman via Import → Link
 
 MIT © PuntersEdge
