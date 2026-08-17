@@ -109,7 +109,10 @@ price as fact — it can say how fresh the number is instead of implying it is l
 ## Coverage, stated honestly
 
 **Racing: 12 sources** — 11 bookmakers plus the Betfair Exchange: BetRight, Sportsbet, Betr, TAB,
-Ladbrokes, Neds, Unibet, PointsBet, PlayUp, TABtouch, Palmerbet and Betfair.
+Ladbrokes, Neds, Unibet, PointsBet, NextBet, TABtouch, Palmerbet and Betfair.
+
+Bookmaker **keys** in the API are not always the brand: NextBet is returned as `playup`, its
+name before rebranding. Filter on the key, not the display name.
 
 **Depth is uneven, and it matters more than the headline count.** Measured on Australian races
 within two hours of jumping: Betfair, BetRight, Sportsbet and Betr quote essentially every race;
