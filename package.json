@@ -2,7 +2,7 @@
   "name": "puntersedge-mcp",
   "version": "0.1.0",
   "mcpName": "io.github.Propertyscout001/puntersedge",
-  "description": "MCP server for the PuntersEdge AU Odds API \u2014 live Australian racing and sports odds from 12 bookmakers, with per-price freshness.",
+  "description": "MCP server for the PuntersEdge AU Odds API \u2014 live Australian racing and sports odds from 11 Australian bookmakers, with per-price freshness.",
   "type": "module",
   "bin": {
     "puntersedge-mcp": "dist/index.js"

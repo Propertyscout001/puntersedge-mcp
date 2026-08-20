@@ -4,7 +4,7 @@
 
 An [MCP](https://modelcontextprotocol.io) server for the [PuntersEdge AU Odds API](https://puntersedge.online/api-platform).
 Ask Claude, ChatGPT, Cursor or any MCP-capable client what's racing next and get real prices from
-**12 Australian sources** — 11 bookmakers plus the Betfair Exchange — side by side, with each
+**11 Australian bookmakers** side by side, with each
 price's own age attached.
 
 ```
@@ -108,8 +108,10 @@ price as fact — it can say how fresh the number is instead of implying it is l
 
 ## Coverage, stated honestly
 
-**Racing: 12 sources** — 11 bookmakers plus the Betfair Exchange: BetRight, Sportsbet, Betr, TAB,
-Ladbrokes, Neds, Unibet, PointsBet, NextBet, TABtouch, Palmerbet and Betfair.
+**Racing: 11 Australian bookmakers** — BetRight, Sportsbet, Betr, TAB, Ladbrokes, Neds,
+Unibet, PointsBet, NextBet, TABtouch and Palmerbet. The Betfair Exchange is ingested but its
+prices are withheld from customer responses pending a Betfair data licence, so it is not
+counted here and you will never see a Betfair price through this server.
 
 Bookmaker **keys** in the API are not always the brand: NextBet is returned as `playup`, its
 name before rebranding. Filter on the key, not the display name.
@@ -117,7 +119,7 @@ name before rebranding. Filter on the key, not the display name.
 **Near the jump, coverage is broad and fairly even.** Measured over 13 days of captured
 snapshots — 3,339 Australian races, each within 30 minutes of jumping — every one of the twelve
 sources quoted between 75% and 97% of them: TABtouch 97%, PointsBet 96%, then Sportsbet, Neds,
-Palmerbet, Ladbrokes, BetRight, Betr, TAB and Betfair all clustered at 80–82%, Unibet 79% and
+Palmerbet, Ladbrokes, BetRight, Betr and TAB all clustered at 80–82%, Unibet 79% and
 NextBet 75%.
 
 Books publish markets at different times, so a race several hours out often carries only two or

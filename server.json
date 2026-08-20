@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Propertyscout001/puntersedge",
-  "description": "Live Australian racing and sports odds from 12 bookmakers, with per-price freshness.",
+  "description": "Live Australian racing and sports odds from 11 Australian bookmakers, with per-price freshness.",
   "repository": {
     "url": "https://github.com/Propertyscout001/puntersedge-mcp",
     "source": "github"
