@@ -2,9 +2,9 @@
 
 **Live Australian racing and sports odds inside your AI assistant.**
 
-An [MCP](https://modelcontextprotocol.io) server for the [PuntersEdge AU Odds API](https://puntersedge.online/api-platform).
+An [MCP](https://modelcontextprotocol.io) server for the [PuntersEdge AU Odds API](https://puntersedge.online/api).
 Ask Claude, ChatGPT, Cursor or any MCP-capable client what's racing next and get real prices from
-**11 Australian bookmakers** side by side, with each
+**14 Australian bookmakers** side by side (live count: [coverage report](https://puntersedge.online/coverage-report)), with each
 price's own age attached.
 
 ```
@@ -20,8 +20,12 @@ You: What's the next race at Randwick and who's favourite?
 ## Install
 
 ```bash
-npm install -g puntersedge-mcp
+# Not on npm yet — install straight from GitHub (the prepare step builds it).
+npm install -g github:Propertyscout001/puntersedge-mcp
 ```
+
+Prefer Python? The PyPI server (`pip install puntersedge-mcp`, or `uvx puntersedge-mcp`) is documented at
+https://puntersedge.online/developers/mcp-server.
 
 You need an API key. The **free tier is 1,500 credits/month with no card required** —
 [get one here](https://puntersedge.online/api).
@@ -35,7 +39,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "puntersedge": {
       "command": "npx",
-      "args": ["-y", "puntersedge-mcp"],
+      "args": ["-y", "github:Propertyscout001/puntersedge-mcp"],
       "env": { "PUNTERSEDGE_API_KEY": "your_key_here" }
     }
   }
@@ -44,7 +48,7 @@ Add to `claude_desktop_config.json`:
 
 ### Cursor / Windsurf / other MCP clients
 
-Same shape — command `npx`, args `["-y", "puntersedge-mcp"]`, and `PUNTERSEDGE_API_KEY` in the env.
+Same shape — command `npx`, args `["-y", "github:Propertyscout001/puntersedge-mcp"]`, and `PUNTERSEDGE_API_KEY` in the env.
 
 ---
 
@@ -108,8 +112,9 @@ price as fact — it can say how fresh the number is instead of implying it is l
 
 ## Coverage, stated honestly
 
-**Racing: 11 Australian bookmakers** — BetRight, Sportsbet, Betr, TAB, Ladbrokes, Neds,
-Unibet, PointsBet, NextBet, TABtouch and Palmerbet. The Betfair Exchange is ingested but its
+**Racing: 14 Australian bookmakers** — BetRight, Sportsbet, Betr, TAB, Ladbrokes, Neds,
+Unibet, PointsBet, NextBet, TABtouch, Palmerbet, BetDeluxe, BetGold and BoostBet. The live count and
+per-book freshness are published at https://puntersedge.online/coverage-report. The Betfair Exchange is ingested but its
 prices are withheld from customer responses pending a Betfair data licence, so it is not
 counted here and you will never see a Betfair price through this server.
 
