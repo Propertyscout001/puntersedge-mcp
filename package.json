@@ -2,7 +2,7 @@
   "name": "puntersedge-mcp",
   "version": "0.1.0",
   "mcpName": "io.github.Propertyscout001/puntersedge",
-  "description": "MCP server for the PuntersEdge AU Odds API \u2014 live Australian racing and sports odds from 14 Australian bookmakers, with per-price freshness.",
+  "description": "MCP server for Australian racing and sports odds \u2014 live prices from 14 Australian bookmakers inside Claude, Cursor and any MCP client. Horse, greyhound and harness racing plus AFL, NRL, NBA and more.",
   "type": "module",
   "bin": {
     "puntersedge-mcp": "dist/index.js"
@@ -24,15 +24,22 @@
   },
   "keywords": [
     "mcp",
+    "mcp-server",
     "model-context-protocol",
+    "claude",
+    "claude-desktop",
+    "cursor",
+    "ai-agents",
     "odds",
-    "betting",
-    "australia",
-    "horse-racing",
+    "odds-api",
     "sports-odds",
+    "horse-racing",
+    "greyhound-racing",
+    "harness-racing",
+    "racing-data",
     "bookmakers",
-    "greyhounds",
-    "harness"
+    "australia",
+    "new-zealand"
   ],
   "author": "PuntersEdge <hello@puntersedge.online>",
   "license": "MIT",

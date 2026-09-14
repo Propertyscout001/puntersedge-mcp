@@ -1,31 +1,32 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Propertyscout001/puntersedge",
-  "description": "Live Australian racing and sports odds from 14 Australian bookmakers, with per-price freshness.",
+  "description": "Australian and New Zealand racing plus Australian sports odds for AI agents: live per-bookmaker prices from 14 Australian bookmakers, the change feed, results, form, premierships, the closing-line archive and feed health. Read-only; each tool states its credit cost.",
   "repository": {
     "url": "https://github.com/Propertyscout001/puntersedge-mcp",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.2.1",
+  "websiteUrl": "https://puntersedge.online/developers/mcp-server",
   "packages": [
     {
-      "registryType": "npm",
+      "registryType": "pypi",
       "identifier": "puntersedge-mcp",
-      "version": "0.1.0",
+      "version": "0.2.1",
       "transport": {
         "type": "stdio"
       },
       "environmentVariables": [
         {
           "name": "PUNTERSEDGE_API_KEY",
-          "description": "PuntersEdge API key. Free tier is 1,500 credits/month with no card required \u2014 get one at https://puntersedge.online/api",
+          "description": "PuntersEdge API key. Free tier is 1,500 credits/month with no card required — get one at https://puntersedge.online/api. The two demo tools work without a key.",
           "isRequired": true,
           "isSecret": true,
           "format": "string"
         },
         {
           "name": "PUNTERSEDGE_BASE_URL",
-          "description": "Override the API base URL. Defaults to https://api.puntersedge.online/v1 \u2014 you should not normally set this.",
+          "description": "Override the API base URL. Defaults to https://api.puntersedge.online — you should not normally set this.",
           "isRequired": false,
           "isSecret": false,
           "format": "string"
