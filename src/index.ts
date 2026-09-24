@@ -40,7 +40,7 @@ async function call(path: string, params: Record<string, unknown> = {}) {
     return {
       error: "PUNTERSEDGE_API_KEY is not set.",
       how_to_fix:
-        "Get a free key at https://puntersedge.online/api (1,500 credits/month, no card) and set " +
+        "Get a free key at https://puntersedge.online/api (3,000 credits/month, no card) and set " +
         "PUNTERSEDGE_API_KEY in this server's environment.",
     };
   }

@@ -19,7 +19,7 @@
       "environmentVariables": [
         {
           "name": "PUNTERSEDGE_API_KEY",
-          "description": "PuntersEdge API key. Free tier is 1,500 credits/month with no card required — get one at https://puntersedge.online/api. The two demo tools work without a key.",
+          "description": "PuntersEdge API key. Free tier is 3,000 credits/month with no card required — get one at https://puntersedge.online/api. The two demo tools work without a key.",
           "isRequired": true,
           "isSecret": true,
           "format": "string"

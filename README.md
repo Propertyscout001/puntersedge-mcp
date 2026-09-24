@@ -17,7 +17,7 @@ You: What's the next race at Randwick and who's favourite?
 ```
 
 14 Australian bookmakers on racing. AU thoroughbred, greyhound and harness; NZ thoroughbred
-and harness. AFL, NRL, NBA, NFL, tennis, cricket and more on sports. Free tier: 1,500 credits
+and harness. AFL, NRL, NBA, NFL, tennis, cricket and more on sports. Free tier: 3,000 credits
 a month, no card.
 
 ---
@@ -77,7 +77,7 @@ First run clones the repo and compiles it with `tsc`, so it takes a while and ne
 a working Node toolchain. Node ≥18.
 
 Get a free API key at https://puntersedge.online/api?utm_source=github&utm_medium=readme —
-1,500 credits a month, no credit card.
+3,000 credits a month, no credit card.
 
 ### Claude Desktop
 
@@ -322,7 +322,7 @@ assuming a mix.
 
 - [MCP server documentation](https://puntersedge.online/developers/mcp-server?utm_source=github&utm_medium=readme)
 - [API documentation](https://api.puntersedge.online/docs)
-- [Pricing](https://puntersedge.online/api/pricing?utm_source=github&utm_medium=readme) — free tier 1,500 credits/month
+- [Pricing](https://puntersedge.online/api/pricing?utm_source=github&utm_medium=readme) — free tier 3,000 credits/month
 - [Live coverage report](https://puntersedge.online/coverage-report?utm_source=github&utm_medium=readme)
 - [Python SDK](https://github.com/Propertyscout001/puntersedge-python)
 - [Postman collection](https://api.puntersedge.online/postman.json) — import into Postman via Import → Link
