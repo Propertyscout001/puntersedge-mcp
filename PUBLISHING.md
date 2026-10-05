@@ -12,7 +12,8 @@ account only the operator holds.
 - [x] `server.json` written and **validated clean** by the official `mcp-publisher validate`
 - [x] Names confirmed free: npm `puntersedge-mcp` (404) and MCP registry `puntersedge` (0 hits)
 - [ ] **npm publish** — needs an npm account
-- [ ] **mcp-publisher login + publish** — needs a GitHub browser device-code approval
+- [x] **MCP Registry** — listed 2026-10-06 as `io.github.Propertyscout001/puntersedge` 0.4.1,
+  pointing at the PyPI package `puntersedge-mcp` (the Python server); GitHub device-code login as Propertyscout001
 
 ## Why npm must come first
 
@@ -63,6 +64,11 @@ than taking manual submissions, so they tend to pick a server up on their own on
 
 `package.json` version, `server.json` version, and `server.json` packages[0].version must all
 match, or the publish is rejected. Bump all three together.
+
+`server.json` lists the **PyPI** package. With each PyPI release of `puntersedge-mcp`: set
+`version` and `packages[0].version` to the PyPI version; keep the `mcp-name:` line in the PyPI
+README (the registry's ownership check) and `description` at 100 characters or fewer; then
+`./mcp-publisher validate`, `./mcp-publisher login github` (device code) and `./mcp-publisher publish`.
 
 
 ---
